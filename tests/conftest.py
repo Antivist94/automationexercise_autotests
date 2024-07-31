@@ -31,8 +31,8 @@ def login_user(browser_manager):
 
 @pytest.fixture(scope = "function", autouse = True)
 def browser_manager(browser_name):
-    browser.config.window_height = 780
-    browser.config.window_width = 1220
+    browser.config.window_height = 1080
+    browser.config.window_width = 1920
     load_dotenv()
     options = Options()
     options.page_load_strategy.page_load_strategy = 'eager'
