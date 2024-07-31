@@ -8,16 +8,16 @@ from utils import attach
 from pages.login_page import LoginPage
 
 
-#
-# def pytest_addoption(parser):
-#     parser.addoption('--browser', help = 'Браузер для запуска тестов')
-#
-#
-# @pytest.fixture(scope = 'session')
-# def browser_name(request):
-#     return request.config.getoption('--browser')
-#
-#
+
+def pytest_addoption(parser):
+    parser.addoption('--browser', help = 'Браузер для запуска тестов')
+
+
+@pytest.fixture(scope = 'session')
+def browser_name(request):
+    return request.config.getoption('--browser')
+
+
 @pytest.fixture()
 def login_user(browser_manager):
     email = os.getenv('user_email')
@@ -38,31 +38,31 @@ def browser_manager():
     options = Options()
     options.page_load_strategy.page_load_strategy = 'eager'
 
-    # selenoid_capabilities = {
-    #     "browserName": browser_name,
-    #     "browserVersion": '100',
-    #     "selenoid:options": {
-    #         "enableVNC": True,
-    #         "enableVideo": True
-    #     }
-    # }
+    selenoid_capabilities = {
+        "browserName": browser_name,
+        "browserVersion": '100',
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": True
+        }
+    }
 
-    # selenoid_login = os.getenv("SELENOID_LOGIN")
-    # selenoid_pass = os.getenv("SELENOID_PASS")
-    # selenoid_url = os.getenv("SELENOID_URL")
-    #
-    # options.capabilities.update(selenoid_capabilities)
-    # driver = webdriver.Remote(
-    #     command_executor = f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
-    #     options = options)
-    #
-    # browser.config.driver = driver
+    selenoid_login = os.getenv("SELENOID_LOGIN")
+    selenoid_pass = os.getenv("SELENOID_PASS")
+    selenoid_url = os.getenv("SELENOID_URL")
 
-    # yield browser
-    #
-    # attach.add_html(browser)
-    # attach.add_logs(browser)
-    # attach.add_screenshot(browser)
-    # attach.add_video(browser)
+    options.capabilities.update(selenoid_capabilities)
+    driver = webdriver.Remote(
+        command_executor = f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
+        options = options)
+
+    browser.config.driver = driver
+
+    yield browser
+
+    attach.add_html(browser)
+    attach.add_logs(browser)
+    attach.add_screenshot(browser)
+    attach.add_video(browser)
 
     browser.quit()
