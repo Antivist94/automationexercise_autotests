@@ -8,7 +8,6 @@ from utils import attach
 from pages.login_page import LoginPage
 
 
-
 def pytest_addoption(parser):
     parser.addoption('--browser', help = 'Браузер для запуска тестов')
 
@@ -31,7 +30,7 @@ def login_user(browser_manager):
 
 
 @pytest.fixture(scope = "function", autouse = True)
-def browser_manager():
+def browser_manager(browser_name):
     browser.config.window_height = 780
     browser.config.window_width = 1220
     load_dotenv()
