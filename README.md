@@ -34,15 +34,15 @@ ___
 ___
 Скриншоты тестов:
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Tests.png" height="350" width="320">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Tests.png" height="480" width="750">
 </p>
 
 ___
 
 Скриншоты отчетности в Allure:
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Allure_2.png" height="480" width="650">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Jenkins_example_1.png" height="480" width="650">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Allure_2.png" height="480" width="750">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Jenkins_example_1.png" height="480" width="750">
 </p>
 
 ___
