@@ -15,6 +15,7 @@ class CatalogPage:
 
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):
+        browser.element('a[href="/product_details/2"]').perform(command.js.scroll_into_view)
         browser.element('a[href="/product_details/2"]').click()
 
     @allure.step("Проверить, что открылась карточка товара и отображается блок 'Write Your Review'")

@@ -35,14 +35,23 @@ ___
 - Тест добавления товара в корзину по кнопке на карточке товара в каталоге
 ___
 Скриншоты тестов:
-
+<p align="left">
+<img align="center" src="" height="350" width="320">
+<img align="center" src="" height="350" width="320">
+</p>
 ___
 Скриншоты отчетности в Allure:
-
+<p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Jenkins_example_1.png" height="480" width="650">
+</p>
 ___
 Скриншоты отчетности в Telegram:
-
+<p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/tg_example.png" height="250" width="220">
+</p>
 ___
 Скринкаст одного из тестов:
-
+<p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/test_example_video.mp4" height="300" width="450">
+</p>
 ___
