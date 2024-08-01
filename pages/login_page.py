@@ -24,9 +24,10 @@ class LoginPage:
     @allure.step("Нажать Login")
     def submit_log_in_values(self):
         browser.element('[data-qa="login-button"]').click()
+
     @allure.step("Проверить, что входи произведён и появилась надпись Logged in as {value} в хэддере")
     def check_sing_up_login_button(self, value):
-        browser.element('.navbar-nav > li:last-child').should(have.text(f'Logged in as f{value}'))
+        browser.element('.navbar-nav > li:last-child').should(have.text(f'Logged in as {value}'))
 
     @allure.step("Авторизоваться пользователем {email}")
     def sing_up_by_user(self, email, password):

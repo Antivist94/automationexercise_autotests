@@ -27,7 +27,7 @@ def test_login():
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка открытия карточки товара из каталога")
-def test_catalog_page(login_user):
+def test_catalog_page():
     page = CatalogPage()
     page.open_catalog_page()
     page.open_product_detail()
@@ -39,7 +39,7 @@ def test_catalog_page(login_user):
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка аккордеон меню с категориями товаров")
-def test_accordion_menu_of_category(login_user):
+def test_accordion_menu_of_category():
     page = CatalogPage()
     page.open_catalog_page()
     page.open_woman_category_in_right_menu()

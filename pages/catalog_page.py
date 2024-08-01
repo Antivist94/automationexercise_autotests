@@ -13,7 +13,6 @@ class CatalogPage:
             timeout = 10).wait_until(have.size_greater_than_or_equal(1))
         browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
-
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):
         browser.element('a[href="/product_details/2"]').click()
