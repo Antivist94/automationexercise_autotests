@@ -49,7 +49,7 @@ ___
 
 Скриншоты отчетности в Telegram:
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/tg_example.png" height="300" width="250">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/tg_report.png" height="300" width="250">
 </p>
 
 ___
