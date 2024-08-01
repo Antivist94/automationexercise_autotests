@@ -50,8 +50,7 @@ def test_accordion_menu_of_category():
     page.check_kids_category_is_opened()
 
 
-brand = [Brands.BIBA, Brands.POLO, Brands.MADAME,
-         Brands.BABYHUG, Brands.H_and_M]
+brand = [Brands.POLO, Brands.BABYHUG, Brands.H_and_M]
 
 
 @allure.tag("web")

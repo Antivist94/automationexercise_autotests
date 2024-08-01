@@ -13,11 +13,9 @@
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/selene.png" height="30" width="30">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/telegram.png" height="30" width="30">
 </p>
-___
 
 ##### Команда для запуска тестов
 ___
-Чтобы запустить тесты, используйте команду:
 ```
 pytest tests/automationexercise_tests.py --browser=${BROWSER_NAME}
 ```
@@ -36,22 +34,29 @@ ___
 ___
 Скриншоты тестов:
 <p align="left">
-<img align="center" src="" height="350" width="320">
-<img align="center" src="" height="350" width="320">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Tests.png" height="350" width="320">
 </p>
+
 ___
+
 Скриншоты отчетности в Allure:
 <p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Allure_2.png" height="480" width="650">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/Jenkins_example_1.png" height="480" width="650">
 </p>
+
 ___
+
 Скриншоты отчетности в Telegram:
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/tg_example.png" height="250" width="220">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/tg_example.png" height="300" width="250">
 </p>
+
 ___
+
 Скринкаст одного из тестов:
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/test_example_video.mp4" height="300" width="450">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/test_example_video.gif" height="350" width="450">
 </p>
+
 ___
