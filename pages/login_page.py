@@ -7,6 +7,8 @@ class LoginPage:
     def open_login_page(self):
         browser.open('https://automationexercise.com/login')
         browser.all('button p').element_by(have.exact_text('Consent')).click()
+        browser.driver.execute_script("var ads = document.getElementsByClassName('ad'); for(var i = 0; i < ads.length; "
+                                      "i++){ ads[i].remove(); }")
         browser.all('[id^=google_ads][id$=container__]').with_(
             timeout = 10).wait_until(have.size_greater_than_or_equal(3))
         browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)

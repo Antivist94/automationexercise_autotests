@@ -7,8 +7,10 @@ class CatalogPage:
     def open_catalog_page(self):
         browser.open("https://automationexercise.com/")
         browser.all('button p').element_by(have.exact_text('Consent')).click()
+        browser.driver.execute_script("var ads = document.getElementsByClassName('ad'); for(var i = 0; i < ads.length; "
+                                      "i++){ ads[i].remove(); }")
         browser.all('[id^=google_ads][id$=container__]').with_(
-            timeout = 10).wait_until(have.size_greater_than_or_equal(3))
+            timeout = 10).wait_until(have.size_greater_than_or_equal(1))
         browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
 

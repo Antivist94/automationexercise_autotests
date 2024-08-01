@@ -4,9 +4,14 @@
 ### Инструменты:
 
 <p align="left">
-<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/allure_pic.jpeg" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/python.svg" height="30" width="30">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/github.svg" height="30" width="30">
-
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/selenoid.png" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/allure_pic.jpeg" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/jenkins-original.svg" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/pycharm-original.svg" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/selene.png" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/gitpics/giticons/telegram.png" height="30" width="30">
 </p>
 ___
 
