@@ -34,7 +34,7 @@ class CatalogPage:
 
     @allure.step("Раскрыть категорию KIDS")
     def open_kids_category_in_right_menu(self):
-        browser.element('#accordian [href="#Kids"]').perform(command.js.scroll_into_view).click()
+        browser.element('#accordian [href="#Kids"]').perform(command.js.scroll_into_view).perform(command.js.click)
 
     @allure.step("Проверить, что категория KIDS раскрылась")
     def check_kids_category_is_opened(self):

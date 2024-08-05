@@ -6,6 +6,9 @@ from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
 from utils import attach
 from pages.login_page import LoginPage
+from pages.catalog_page import CatalogPage
+
+DEFAULT_BROWSER = "chrome"
 
 
 def pytest_addoption(parser):
@@ -17,10 +20,22 @@ def browser_name(request):
     return request.config.getoption('--browser')
 
 
+@pytest.fixture
+def login_page():
+    page = LoginPage()
+    return page
+
+
+@pytest.fixture
+def catalog_page():
+    page = CatalogPage()
+    return page
+
+
 @pytest.fixture()
 def login_user(browser_manager):
-    email = os.getenv('user_email')
-    password = os.getenv('password')
+    email = os.getenv('USER_EMAIL')
+    password = os.getenv('USER_PASSWORD')
     if email is None or password is None:
         raise EnvironmentError("Environment variables 'user_email' and 'password' must be set.")
 
@@ -31,6 +46,8 @@ def login_user(browser_manager):
 
 @pytest.fixture(scope = "function", autouse = True)
 def browser_manager(browser_name):
+    browser_name = browser_name if browser_name != "" else DEFAULT_BROWSER
+    browser.config.base_url = 'https://automationexercise.com'
     browser.config.window_height = 1080
     browser.config.window_width = 1920
     load_dotenv()
@@ -46,16 +63,16 @@ def browser_manager(browser_name):
         }
     }
 
-    selenoid_login = os.getenv("SELENOID_LOGIN")
-    selenoid_pass = os.getenv("SELENOID_PASS")
-    selenoid_url = os.getenv("SELENOID_URL")
+    # selenoid_login = os.getenv("SELENOID_LOGIN")
+    # selenoid_pass = os.getenv("SELENOID_PASS")
+    # selenoid_url = os.getenv("SELENOID_URL")
+    #
+    # options.capabilities.update(selenoid_capabilities)
+    # driver = webdriver.Remote(
+    #     command_executor = f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
+    #     options = options)
 
-    options.capabilities.update(selenoid_capabilities)
-    driver = webdriver.Remote(
-        command_executor = f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
-        options = options)
-
-    browser.config.driver = driver
+    # browser.config.driver = driver
 
     yield browser
 
