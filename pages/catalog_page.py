@@ -7,16 +7,11 @@ class CatalogPage:
     def open_catalog_page(self):
         browser.open("https://automationexercise.com/")
         browser.all('button p').element_by(have.exact_text('Consent')).click()
-        browser.driver.execute_script("var ads = document.getElementsByClassName('ad'); for(var i = 0; i < ads.length; "
-                                      "i++){ ads[i].remove(); }")
-        browser.all('[id^=google_ads][id$=container__]').with_(
-            timeout = 10).wait_until(have.size_greater_than_or_equal(1))
-        browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
+
 
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):
-        browser.element('a[href="/product_details/2"]').perform(command.js.scroll_into_view)
-        browser.element('a[href="/product_details/2"]').click()
+        browser.element('a[href="/product_details/2"]').perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что открылась карточка товара и отображается блок 'Write Your Review'")
     def check_review_tab_is_show(self):
@@ -24,8 +19,7 @@ class CatalogPage:
 
     @allure.step("Раскрыть категорию WOMEN")
     def open_woman_category_in_right_menu(self):
-        browser.element('#accordian [href="#Women"]').perform(command.js.scroll_into_view)
-        browser.element('#accordian [href="#Women"]').click()
+        browser.element('#accordian [href="#Women"]').perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что категория WOMEN раскрылась")
     def check_woman_category_is_opened(self):
@@ -33,8 +27,7 @@ class CatalogPage:
 
     @allure.step("Раскрыть категорию MEN")
     def open_men_category_in_right_menu(self):
-        browser.element('#accordian [href="#Men"]').perform(command.js.scroll_into_view)
-        browser.element('#accordian [href="#Men"]').click()
+        browser.element('#accordian [href="#Men"]').perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что категория MEN раскрылась")
     def check_men_category_is_opened(self):
@@ -42,8 +35,7 @@ class CatalogPage:
 
     @allure.step("Раскрыть категорию KIDS")
     def open_kids_category_in_right_menu(self):
-        browser.element('#accordian [href="#Kids"]').perform(command.js.scroll_into_view)
-        browser.element('#accordian [href="#Kids"]').click()
+        browser.element('#accordian [href="#Kids"]').perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что категория KIDS раскрылась")
     def check_kids_category_is_opened(self):
@@ -51,8 +43,7 @@ class CatalogPage:
 
     @allure.step("Выбрать товар бренда {brand}")
     def open_list_of_products_by_brand_category(self, brand):
-        browser.element(f".brands-name a[href='/brand_products/{brand}']").perform(command.js.scroll_into_view)
-        browser.element(f".brands-name a[href='/brand_products/{brand}']").click()
+        browser.element(f".brands-name a[href='/brand_products/{brand}']").perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что отображаются отфильтрованные товары бренда {brand}")
     def check_brand_title(self, brand):
@@ -61,9 +52,7 @@ class CatalogPage:
 
     @allure.step("Добавить товар #{order} в корзину нажав на 'Add to cart' в карточке товара")
     def add_product_to_cart_by_order(self, order):
-        element = browser.all('.productinfo.text-center a.add-to-cart').element(order)
-        element.perform(command.js.scroll_into_view)
-        element.click()
+        browser.all('.productinfo.text-center a.add-to-cart').element(order).perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что вышло модальное окно с подтверждением добавления товара в корзину")
     def check_success_add_at_cart_alert_is_displayed_and_close(self):
