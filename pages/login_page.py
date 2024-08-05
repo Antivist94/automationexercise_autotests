@@ -4,6 +4,7 @@ import allure
 from selene import browser, have, command
 
 
+
 class LoginPage:
     @allure.step("Открыть страницу входа")
     def open_login_page(self):

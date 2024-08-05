@@ -1,5 +1,8 @@
 import allure
+from dotenv import load_dotenv
 from selene import browser, have, command, be
+
+load_dotenv()
 
 
 class CatalogPage:
