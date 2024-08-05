@@ -2,9 +2,7 @@ import os
 
 import allure
 from dotenv import load_dotenv
-from selene import browser, have
-
-load_dotenv()
+from selene import browser, have, command
 
 
 class LoginPage:
@@ -23,11 +21,11 @@ class LoginPage:
 
     @allure.step("Нажать Login")
     def submit_log_in_values(self):
-        browser.element('[.login-form [type="submit"]').click()
+        browser.element('.login-form .btn-default').perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что входи произведён и появилась надпись Logged in as *имя пользователя* в хэддере")
     def check_sing_up_login_button(self):
-        browser.element('.navbar-nav > li:last-child').should(have.text(f'Logged in as {os.getenv('USER')}'))
+        browser.element('.navbar-nav > li:last-child').should(have.text(f'Logged in as {os.getenv('USER_NAME')}'))
 
     @allure.step("Авторизоваться пользователем")
     def sing_up_by_user(self, email, password):

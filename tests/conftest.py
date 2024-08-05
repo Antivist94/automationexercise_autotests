@@ -32,18 +32,6 @@ def catalog_page():
     return page
 
 
-@pytest.fixture()
-def login_user(browser_manager):
-    email = os.getenv('USER_EMAIL')
-    password = os.getenv('USER_PASSWORD')
-    if email is None or password is None:
-        raise EnvironmentError("Environment variables 'user_email' and 'password' must be set.")
-
-    login_page = LoginPage()
-
-    login_page.sing_up_by_user(email = email, password = password)
-
-
 @pytest.fixture(scope = "function", autouse = True)
 def browser_manager(browser_name):
     browser_name = browser_name if browser_name != "" else DEFAULT_BROWSER
