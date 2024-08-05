@@ -42,7 +42,8 @@ class CatalogPage:
 
     @allure.step("Выбрать товар бренда {brand}")
     def open_list_of_products_by_brand_category(self, brand):
-        browser.element(f".brands-name a[href='/brand_products/{brand}']").perform(command.js.scroll_into_view).click()
+        (browser.element(f".brands-name a[href='/brand_products/{brand}']")
+         .perform(command.js.scroll_into_view).perform(command.js.click))
 
     @allure.step("Проверить, что отображаются отфильтрованные товары бренда {brand}")
     def check_brand_title(self, brand):

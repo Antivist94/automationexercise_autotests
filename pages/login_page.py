@@ -9,7 +9,6 @@ class LoginPage:
     def open_login_page(self):
         browser.open('https://automationexercise.com/login')
         browser.all('button p').element_by(have.exact_text('Consent')).click()
-        browser.all('[id^=google_ads][id$=container__]').perform(command.js.remove)
 
     @allure.step("Ввести email")
     def input_email_address(self):
