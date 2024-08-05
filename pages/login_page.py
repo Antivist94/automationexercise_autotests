@@ -12,15 +12,15 @@ class LoginPage:
 
     @allure.step("Ввести email")
     def input_email_address(self):
-        browser.element('[data-qa="login-email"]').send_keys(os.getenv('USER_EMAIL'))
+        browser.element('.login-form [type="email"]').send_keys(os.getenv('USER_EMAIL'))
 
     @allure.step("Ввести пароль")
     def input_password(self):
-        browser.element('[data-qa="login-password"]').send_keys(os.getenv('USER_PASSWORD'))
+        browser.element('.login-form [type="password"]').send_keys(os.getenv('USER_PASSWORD'))
 
     @allure.step("Нажать Login")
     def submit_log_in_values(self):
-        browser.element('[data-qa="login-button"]').click()
+        browser.element('[.login-form [type="submit"]').click()
 
     @allure.step("Проверить, что входи произведён и появилась надпись Logged in as *имя пользователя* в хэддере")
     def check_sing_up_login_button(self):
