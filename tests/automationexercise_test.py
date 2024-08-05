@@ -16,10 +16,10 @@ from utils.brands import Brands
 def test_login():
     page = LoginPage()
     page.open_login_page()
-    page.input_email_address(os.getenv('user_email'))
-    page.input_password(os.getenv('password'))
+    page.input_email_address()
+    page.input_password()
     page.submit_log_in_values()
-    page.check_sing_up_login_button(os.getenv('user'))
+    page.check_sing_up_login_button()
 
 
 @allure.tag("web")

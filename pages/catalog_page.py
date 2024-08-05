@@ -8,7 +8,6 @@ class CatalogPage:
         browser.open("https://automationexercise.com/")
         browser.all('button p').element_by(have.exact_text('Consent')).click()
 
-
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):
         browser.element('a[href="/product_details/2"]').perform(command.js.scroll_into_view).click()
@@ -52,7 +51,8 @@ class CatalogPage:
 
     @allure.step("Добавить товар #{order} в корзину нажав на 'Add to cart' в карточке товара")
     def add_product_to_cart_by_order(self, order):
-        browser.all('.productinfo.text-center a.add-to-cart').element(order).perform(command.js.scroll_into_view).click()
+        browser.all('.productinfo.text-center a.add-to-cart').element(order).perform(
+            command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что вышло модальное окно с подтверждением добавления товара в корзину")
     def check_success_add_at_cart_alert_is_displayed_and_close(self):
