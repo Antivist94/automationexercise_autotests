@@ -54,8 +54,8 @@ brand = [Brands.POLO, Brands.BABYHUG, Brands.H_and_M]
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка отображения товаров по фильтрам по бренду")
-@pytest.mark.parametrize("brands", brand)
-def test_brands_menu_by_category(brands, catalog_page):
+@pytest.mark.parametrize("brand", brand)
+def test_brands_menu_by_category(brand, catalog_page):
     catalog_page.open_catalog_page()
     catalog_page.open_list_of_products_by_brand_category(brand)
     catalog_page.check_brand_title(brand)
