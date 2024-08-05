@@ -1,9 +1,6 @@
 import allure
 import pytest
 from allure_commons.types import Severity
-
-from pages.login_page import LoginPage
-from pages.catalog_page import CatalogPage
 from test_data.data import Brands
 
 

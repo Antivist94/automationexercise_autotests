@@ -1,8 +1,10 @@
 import os
 
 import allure
-from selene import browser, have, command
+from dotenv import load_dotenv
+from selene import browser, have
 
+load_dotenv()
 
 
 class LoginPage:
