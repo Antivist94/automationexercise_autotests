@@ -20,18 +20,6 @@ def browser_name(request):
     return request.config.getoption('--browser')
 
 
-@pytest.fixture
-def login_page():
-    page = LoginPage()
-    return page
-
-
-@pytest.fixture
-def catalog_page():
-    page = CatalogPage()
-    return page
-
-
 @pytest.fixture(scope = "function", autouse = True)
 def browser_manager(browser_name):
     browser_name = browser_name if browser_name != "" else DEFAULT_BROWSER

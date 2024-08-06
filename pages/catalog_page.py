@@ -8,12 +8,12 @@ load_dotenv()
 class CatalogPage:
     @allure.step("Открыть страницу Каталога")
     def open_catalog_page(self):
-        browser.open("https://automationexercise.com/")
+        browser.open("/")
         browser.all('button p').element_by(have.exact_text('Consent')).click()
 
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):
-        browser.element('a[href="/product_details/2"]').perform(command.js.scroll_into_view).click()
+        browser.all('.choose').second.perform(command.js.scroll_into_view).click()
 
     @allure.step("Проверить, что открылась карточка товара и отображается блок 'Write Your Review'")
     def check_review_tab_is_show(self):
@@ -25,7 +25,7 @@ class CatalogPage:
 
     @allure.step("Проверить, что категория WOMEN раскрылась")
     def check_woman_category_is_opened(self):
-        browser.element('div#Women.panel-collapse.in').should(be.present)
+        browser.element('#Women.panel-collapse.in').should(be.present)
 
     @allure.step("Раскрыть категорию MEN")
     def open_men_category_in_right_menu(self):
@@ -33,7 +33,7 @@ class CatalogPage:
 
     @allure.step("Проверить, что категория MEN раскрылась")
     def check_men_category_is_opened(self):
-        browser.element('div#Men.panel-collapse.in').should(be.present)
+        browser.element('#Men.panel-collapse.in').should(be.present)
 
     @allure.step("Раскрыть категорию KIDS")
     def open_kids_category_in_right_menu(self):
@@ -41,7 +41,7 @@ class CatalogPage:
 
     @allure.step("Проверить, что категория KIDS раскрылась")
     def check_kids_category_is_opened(self):
-        browser.element('div#Kids.panel-collapse.in').should(be.present)
+        browser.element('#Kids.panel-collapse.in').should(be.present)
 
     @allure.step("Выбрать товар бренда {brand}")
     def open_list_of_products_by_brand_category(self, brand):
