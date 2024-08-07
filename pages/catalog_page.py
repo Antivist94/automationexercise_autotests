@@ -62,3 +62,6 @@ class CatalogPage:
     def check_success_add_at_cart_alert_is_displayed_and_close(self):
         browser.element('#cartModal').should(be.present)
         browser.element('#cartModal .close-modal').click()
+
+
+catalog_page = CatalogPage()

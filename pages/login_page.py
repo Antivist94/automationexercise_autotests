@@ -38,3 +38,6 @@ class LoginPage:
         self.input_email_address(email)
         self.input_password(password)
         self.submit_log_in_values()
+
+
+login_page = LoginPage()

@@ -2,12 +2,9 @@ import allure
 import pytest
 from allure_commons.types import Severity
 
-from pages.catalog_page import CatalogPage
-from pages.login_page import LoginPage
+from pages.catalog_page import catalog_page
+from pages.login_page import login_page
 from test_data.data import Brands
-
-login_page = LoginPage()
-catalog_page = CatalogPage()
 
 
 @allure.tag("web")
