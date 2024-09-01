@@ -20,8 +20,8 @@ def browser_name(request):
     return request.config.getoption('--browser')
 
 
-@pytest.fixture(scope = "function", autouse = True)
-def browser_manager(browser_name):
+@pytest.fixture(scope = "function")
+def browser_manager_selenoid(browser_name):
     browser_name = browser_name if browser_name != "" else DEFAULT_BROWSER
     browser.config.base_url = 'https://automationexercise.com'
     browser.config.window_height = 1080
@@ -58,3 +58,27 @@ def browser_manager(browser_name):
     attach.add_video(browser)
 
     browser.quit()
+
+
+@pytest.fixture(scope = "function")
+def browser_manager(browser_name):
+    browser.config.base_url = 'https://automationexercise.com'
+    browser.config.window_height = 1080
+    browser.config.window_width = 1920
+    load_dotenv()
+    options = Options()
+    options.page_load_strategy.page_load_strategy = 'eager'
+
+    yield browser
+
+    attach.add_html(browser)
+    attach.add_logs(browser)
+    attach.add_screenshot(browser)
+    attach.add_video(browser)
+
+    browser.quit()
+
+
+@pytest.fixture(scope = "function")
+def api_base_url():
+    return 'https://automationexercise.com/'

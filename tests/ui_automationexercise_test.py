@@ -12,7 +12,7 @@ from test_data.data import Brands
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Авторизация на сайте")
-def test_login():
+def test_login(browser_manager):
     login_page.open_login_page()
     login_page.input_email_address()
     login_page.input_password()
@@ -25,7 +25,7 @@ def test_login():
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка открытия карточки товара из каталога")
-def test_catalog_page():
+def test_catalog_page(browser_manager):
     catalog_page.open_catalog_page()
     catalog_page.open_product_detail()
     catalog_page.check_review_tab_is_show()

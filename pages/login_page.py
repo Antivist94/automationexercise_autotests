@@ -14,7 +14,7 @@ class LoginPage:
     @allure.step("Открыть страницу входа")
     def open_login_page(self):
         browser.open('/login')
-        browser.all('button p').element_by(have.exact_text('Consent')).click()
+        #browser.all('button p').element_by(have.exact_text('Consent')).click()
 
     @allure.step("Ввести email")
     def input_email_address(self):
