@@ -12,7 +12,7 @@ from test_data.data import Brands
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Авторизация на сайте")
-def test_login(browser_manager):
+def test_login(browser_manager_selenoid):
     login_page.open_login_page()
     login_page.input_email_address()
     login_page.input_password()
@@ -25,7 +25,7 @@ def test_login(browser_manager):
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка открытия карточки товара из каталога")
-def test_catalog_page(browser_manager):
+def test_catalog_page(browser_manager_selenoid):
     catalog_page.open_catalog_page()
     catalog_page.open_product_detail()
     catalog_page.check_review_tab_is_show()
@@ -36,7 +36,7 @@ def test_catalog_page(browser_manager):
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка аккордеон меню с категориями товаров")
-def test_accordion_menu_of_category():
+def test_accordion_menu_of_category(browser_manager_selenoid):
     catalog_page.open_catalog_page()
     catalog_page.open_woman_category_in_right_menu()
     catalog_page.check_woman_category_is_opened()
@@ -55,7 +55,7 @@ brand = [Brands.POLO, Brands.BABYHUG, Brands.H_and_M]
 @allure.feature("Каталог товаров")
 @allure.story("Проверка отображения товаров по фильтрам по бренду")
 @pytest.mark.parametrize("brand", brand)
-def test_brands_menu_by_category(brand):
+def test_brands_menu_by_category(browser_manager_selenoid, brand):
     catalog_page.open_catalog_page()
     catalog_page.open_list_of_products_by_brand_category(brand)
     catalog_page.check_brand_title(brand)
@@ -66,7 +66,7 @@ def test_brands_menu_by_category(brand):
 @allure.label("owner", "Evdokimenko Eugene")
 @allure.feature("Каталог товаров")
 @allure.story("Проверка добавления товара в корзину по кнопке на карточке товара в каталоге")
-def test_add_to_cart():
+def test_add_to_cart(browser_manager_selenoid):
     catalog_page.open_catalog_page()
     catalog_page.add_product_to_cart_by_order(1)
     catalog_page.check_success_add_at_cart_alert_is_displayed_and_close()
