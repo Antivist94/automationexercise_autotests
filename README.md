@@ -63,6 +63,10 @@ ___
 <p align="left">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/Tests.png" height="480" width="750">
 </p>
+Запуск тестов в BrowserStuck
+<p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/bs_mobile_example.png" height="480" width="750">
+</p>
 
 ___
 
