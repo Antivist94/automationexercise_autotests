@@ -14,22 +14,28 @@
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/pycharm-original.svg" height="30" width="30">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/selene.png" height="30" width="30">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/telegram.png" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/Appium_pic.svg" height="30" width="30">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/Android_Studio_pic.svg" height="30" width="30">
 </p>
 
 ##### Команда для запуска тестов
 
-UI тесты:
+UI тесты. Параметр _${BROWSER_NAME}_ — браузер, в котором будут выполняться тесты в selenoid.
 
 ```
-pytest tests/ui_automationexercise_test.py --browser=${BROWSER_NAME}
+pytest tests/ui/ui_automationexercise_test.py --browser=${BROWSER_NAME}
 ```
-
-Где _${BROWSER_NAME}_ — это переменная, указывающая на браузер, в котором будут выполняться тесты в selenoid.
 
 API тесты:
 
 ```
-pytest tests/api_automationexercise_test.py
+pytest tests/api/api_automationexercise_test.py
+```
+
+Тесты мобильного приложения BrowserStuck. Для запуска локально, следует указать параметр --context=local_emulator
+
+```
+pytest tests/mobile/mobile_git_tutor_test.py --context=bstack 
 ```
 
 ___
@@ -41,6 +47,7 @@ ___
 автотестов и также удобных отчетов о прохождении тестов.
 
 Проверяемая функциональность:
+
 - Тест на авторизацию
 - Тест на открытие карточки товара из каталога
 - Тест меню с категориями товаров
@@ -59,6 +66,7 @@ ___
 <p align="left">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/Allure_2.png" height="480" width="750">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/Jenkins_example_1.png" height="480" width="750">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/mobile_report.png" height="480" width="750">
 </p>
 
 ___
@@ -70,9 +78,15 @@ ___
 
 ___
 
-Скринкаст одного из тестов:
+Скринкасты тестов:
+UI:
 <p align="left">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/test_example_video.gif" height="350" width="450">
+</p>
+
+Mobile:
+<p align="left">
+<img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/mobile_tests.gif" height="350" width="450">
 </p>
 
 ___
