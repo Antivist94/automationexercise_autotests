@@ -1,10 +1,11 @@
 ## Описание проекта
-
+Дипломный проект студента qa guru 14 поток.
+UI и API автотесты:
 Тестирование тренировочного сайта онлайн магазина https://automationexercise.com/.
-В проекте используются UI и API тесты.
+Mobile автотесты:
+Тестирование приложения Git Tutor
 
 ### Инструменты:
-
 <p align="left">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/python.svg" height="30" width="30">
 <img align="center" src="https://github.com/Antivist94/automationexercise_autotests/blob/main/resources/icons/github.svg" height="30" width="30">
@@ -41,8 +42,8 @@ pytest tests/mobile/mobile_git_tutor_test.py --context=bstack
 ___
 
 ### Описание тестов
-
-Тесты разработаны для проверки функциональности интернет-магазина.
+UI и API автотесты:
+Тесты на проверку функциональности интернет-магазина.
 Каждый из тест кейсов имеет аннотацию, которая позволяет использовать Allure для создания ручных тест-кейсов на основе
 автотестов и также удобных отчетов о прохождении тестов.
 
@@ -54,6 +55,9 @@ ___
 - Тест отображения товаров по бренду
 - Тест добавления товара в корзину по кнопке на карточке товара в каталоге
 
+Mobile автотесты:
+- Тест на страницы вводного руководства
+- Тесты на страницы с командами git
 ___
 Скриншоты тестов:
 <p align="left">
