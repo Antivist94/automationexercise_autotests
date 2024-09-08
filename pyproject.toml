@@ -13,6 +13,7 @@ allure-pytest = "^2.13.5"
 selenium = ">=4.21.0,<4.22.0"
 python-dotenv = ">=1.0.1,<1.1.0"
 requests = "^2.32.3"
+appium-python-client = "^4.1.0"
 
 
 [build-system]

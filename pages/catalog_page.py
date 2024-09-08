@@ -9,7 +9,7 @@ class CatalogPage:
     @allure.step("Открыть страницу Каталога")
     def open_catalog_page(self):
         browser.open("/")
-        #browser.all('button p').element_by(have.exact_text('Consent')).click()
+        browser.all('button p').element_by(have.exact_text('Consent')).click()
 
     @allure.step("Нажать View Product у второй карточки товара")
     def open_product_detail(self):

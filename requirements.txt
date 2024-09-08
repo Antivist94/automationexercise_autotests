@@ -1,8 +1,0 @@
-pytest~=8.2.2
-selene>=2.0.0rc9
-allure-pytest
-python-dotenv~=1.0.1
-selenium~=4.21.0
-requests~=2.31.0
-jsonschema~=4.23.0
-requests
